@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RaizViva: catálogo digital de árvores nativas brasileiras.">
+  <title>RaizViva | Catálogo da Natureza</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#">🌱 RaizViva</a>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#catalogo">Espécies</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div>
+        <span class="eyebrow">CATÁLOGO DIGITAL DA BIODIVERSIDADE</span>
+        <h1>Conhecer para<br><em>preservar.</em></h1>
+        <p>Descubra árvores nativas brasileiras, conheça seus nomes científicos e acompanhe a riqueza da nossa natureza.</p>
+        <a class="button" href="#catalogo">Explorar espécies ↗</a>
+      </div>
+      <div class="hero-image">
+        <span>BIODIVERSIDADE BRASILEIRA</span>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalogo">
+      <div class="section-title">
+        <span class="eyebrow">NOSSO ACERVO</span>
+        <h2>Espécies nativas</h2>
+        <p>Conhecimento botânico em um só lugar.</p>
+      </div>
+
+      <div class="search-area">
+        <input id="search" type="search"
+          placeholder="Pesquise pelo nome popular ou científico...">
+        <select id="region">
+          <option value="Todas">Todas as categorias</option>
+          <option value="Mata Atlântica">Mata Atlântica</option>
+          <option value="Mata ciliar">Mata ciliar</option>
+          <option value="Diversos biomas">Diversos biomas</option>
+        </select>
+      </div>
+
+      <div class="plant-grid" id="plants"></div>
+      <p id="empty" class="empty" hidden>Nenhuma espécie encontrada.</p>
+    </section>
+
+    <section class="about" id="sobre">
+      <span class="eyebrow">NOSSA MISSÃO</span>
+      <h2>A tecnologia também pode<br><em>cultivar o futuro.</em></h2>
+      <p>RaizViva é um projeto independente de educação ambiental e tecnologia. Seu objetivo é aproximar pessoas da flora nativa brasileira por meio de informações botânicas e ferramentas digitais.</p>
+      <p class="disclaimer">Projeto demonstrativo. As imagens são referências visuais das espécies e podem mostrar árvores adultas, não necessariamente mudas.</p>
+    </section>
+  </main>
+
+  <footer>
+    <strong>🌱 RaizViva</strong>
+    <span>Projeto independente • 2026</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
