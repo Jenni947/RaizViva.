@@ -1,0 +1,248 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --green: #234b37;
+  --light: #eaf0e4;
+  --cream: #f7f8f1;
+  --text: #20352a;
+  --muted: #758278;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.header {
+  height: 75px;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid #e3e9df;
+}
+
+.logo {
+  font: 800 23px Manrope, sans-serif;
+  color: var(--green);
+  text-decoration: none;
+}
+
+nav { display: flex; gap: 25px; }
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.hero {
+  padding: 85px 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: #71905d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1, h2 {
+  font-family: Manrope, sans-serif;
+  letter-spacing: -2px;
+}
+
+h1 {
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.08;
+  margin: 18px 0;
+}
+
+h1 em, h2 em {
+  color: #779a5d;
+  font-style: normal;
+}
+
+.hero p {
+  max-width: 440px;
+  line-height: 1.8;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 15px 22px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 15px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero-image {
+  min-height: 320px;
+  border-radius: 150px 150px 8px 8px;
+  background:
+    linear-gradient(0deg, #193c2d55, transparent),
+    url("https://images.unsplash.com/photo-1448375240586-882707db888b?w=1000")
+    center/cover;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 25px;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.catalog { padding: 70px 9%; }
+
+.section-title { margin-bottom: 28px; }
+
+h2 {
+  font-size: 38px;
+  margin: 10px 0;
+}
+
+.section-title p { color: var(--muted); }
+
+.search-area {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.search-area input, .search-area select {
+  padding: 14px;
+  border: 1px solid #dce4d8;
+  border-radius: 5px;
+  background: white;
+  font: inherit;
+  font-size: 13px;
+}
+
+.search-area input { flex: 1; min-width: 0; }
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.plant-card {
+  background: white;
+  border: 1px solid #e5e9e1;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.plant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px #20352a12;
+}
+
+.plant-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+  background: var(--light);
+}
+
+.card-content { padding: 19px; }
+
+.category {
+  color: #71905d;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.plant-card h3 {
+  font: 700 19px Manrope, sans-serif;
+  margin: 10px 0 5px;
+}
+
+.scientific {
+  color: #63805a;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.description {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  min-height: 60px;
+}
+
+.card-source {
+  color: #71856b;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.about {
+  background: var(--green);
+  color: white;
+  padding: 75px 10%;
+}
+
+.about .eyebrow { color: #c5df9e; }
+
+.about h2 { font-size: clamp(32px, 5vw, 48px); }
+
+.about h2 em { color: #c5df9e; }
+
+.about p {
+  color: #d3dfd4;
+  line-height: 1.8;
+  max-width: 650px;
+  font-size: 13px;
+}
+
+.about .disclaimer { font-size: 11px; opacity: .8; }
+
+footer {
+  padding: 25px 9%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.empty { color: var(--muted); padding: 20px 0; }
+
+@media(max-width: 800px) {
+  .hero { grid-template-columns: 1fr; padding: 55px 7%; }
+  .catalog { padding: 55px 7%; }
+  .plant-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width: 540px) {
+  .header { padding: 0 5%; }
+  nav { gap: 12px; }
+  nav a { font-size: 11px; }
+  .hero-image { min-height: 230px; }
+  .plant-grid { grid-template-columns: 1fr; }
+  .search-area { flex-direction: column; }
+  .search-area select { width: 100%; }
+  footer { flex-direction: column; gap: 10px; }
+}
